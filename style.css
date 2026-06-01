@@ -8,10 +8,16 @@
 
 }
 
+/* RESET */
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
@@ -19,7 +25,10 @@ font-family:'Inter',sans-serif;
 background:var(--ivory);
 color:var(--charcoal);
 line-height:1.8;
+font-size:18px;
 }
+
+/* CONTAINER */
 
 .container{
 width:90%;
@@ -27,14 +36,18 @@ max-width:1100px;
 margin:auto;
 }
 
+/* TYPOGRAPHY */
+
 h1,h2,h3{
 font-family:'Cormorant Garamond',serif;
 font-weight:600;
+color:var(--charcoal);
 }
 
 h1{
-font-size:4rem;
-margin-bottom:20px;
+font-size:4.5rem;
+line-height:1.1;
+margin-bottom:30px;
 }
 
 h2{
@@ -42,73 +55,115 @@ font-size:3rem;
 margin-bottom:30px;
 }
 
+h3{
+font-size:1.8rem;
+margin-bottom:15px;
+}
+
+p{
+margin-bottom:20px;
+}
+
 section{
 padding:100px 0;
 }
 
-.hero{
-min-height:85vh;
-background:#F7F4EE;
-color:#1F2421;
-display:flex;
-align-items:center;
-}
-
-.hero nav a{
-color:#1F2421;
-}
-
-.overlay{
-height:100%;
-padding:40px 0;
-}
+/* NAVIGATION */
 
 nav{
 width:90%;
 max-width:1200px;
-margin:auto;
+margin:0 auto;
+padding:40px 0;
+
 display:flex;
 justify-content:space-between;
 align-items:center;
 }
 
-.logo{
-font-size:1.4rem;
-font-weight:600;
-}
-
 nav ul{
 display:flex;
-list-style:none;
 gap:30px;
+list-style:none;
 }
 
 nav a{
-color:#1F2421;
 text-decoration:none;
+color:var(--charcoal);
 font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+opacity:.6;
+}
+
+/* LOGO */
+
+.logo{
+display:flex;
+flex-direction:column;
+line-height:1;
+}
+
+.logo .small{
+font-size:0.8rem;
+letter-spacing:4px;
+font-weight:600;
+}
+
+.logo .large{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+}
+
+/* HERO */
+
+.hero{
+min-height:90vh;
+display:flex;
+flex-direction:column;
 }
 
 .hero-content{
-max-width:800px;
-margin:180px auto;
+max-width:850px;
+margin:auto;
 text-align:center;
+padding:40px 20px 100px;
 }
 
 .lead{
 font-size:1.5rem;
-margin-bottom:20px;
+font-weight:300;
+margin-bottom:25px;
 }
+
+/* BUTTON */
 
 .button{
 display:inline-block;
-margin-top:30px;
-padding:14px 32px;
-background:var(--brass);
+margin-top:25px;
+padding:14px 34px;
+
+background:var(--charcoal);
 color:white;
+
 text-decoration:none;
-border-radius:3px;
+transition:.3s;
 }
+
+.button:hover{
+opacity:.9;
+}
+
+/* PHILOSOPHY */
+
+.philosophy{
+border-top:1px solid var(--stone);
+background:white;
+}
+
+/* SERVICES */
 
 .service-grid{
 display:grid;
@@ -121,30 +176,125 @@ margin-top:50px;
 background:white;
 padding:40px;
 border-radius:8px;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+transition:.3s;
 }
 
-.card ul{
-margin-top:20px;
-padding-left:20px;
+.card:hover{
+transform:translateY(-4px);
 }
+
+/* EXPERIENCE */
+
+.experience{
+background:white;
+}
+
+.experience-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.experience-card{
+background:var(--ivory);
+padding:35px;
+border-radius:8px;
+border:1px solid var(--stone);
+}
+
+/* ABOUT */
+
+.about{
+background:var(--ivory);
+}
+
+/* NETWORK */
+
+.network{
+background:white;
+}
+
+/* VALUES */
 
 .values-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
-margin-top:30px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
 }
 
-.values-grid div{
+.value-card{
 background:white;
 padding:30px;
-text-align:center;
-font-weight:600;
+border-radius:8px;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
 }
 
-footer{
-padding:40px;
-text-align:center;
+.value-card h3{
+margin-bottom:10px;
+}
+
+/* CONTACT */
+
+.contact{
 background:var(--charcoal);
 color:white;
+text-align:center;
+}
+
+.contact h2{
+color:white;
+}
+
+.contact a{
+color:white;
+}
+
+/* FOOTER */
+
+footer{
+background:#181c19;
+color:white;
+text-align:center;
+padding:30px;
+font-size:0.9rem;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+gap:20px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+h1{
+font-size:3rem;
+}
+
+h2{
+font-size:2.3rem;
+}
+
+.lead{
+font-size:1.2rem;
+}
+
+.hero-content{
+padding-bottom:60px;
+}
+
+section{
+padding:70px 0;
+}
+
 }

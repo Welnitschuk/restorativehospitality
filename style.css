@@ -47,13 +47,15 @@ padding:100px 0;
 }
 
 .hero{
-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-url('images/hero.jpg');
-background-size:cover;
-background-position:center;
-color:white;
+min-height:85vh;
+background:#F7F4EE;
+color:#1F2421;
+display:flex;
+align-items:center;
+}
+
+.hero nav a{
+color:#1F2421;
 }
 
 .overlay{

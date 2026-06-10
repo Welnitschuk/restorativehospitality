@@ -111,6 +111,12 @@ text-transform:uppercase;
 color:var(--sage);
 }
 
+.logo-image {
+  height: 60px;   /* adjust as needed */
+  width: auto;
+  display: block;
+}
+
 /* HERO */
 .hero{
 max-width:950px;

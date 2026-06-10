@@ -1,3 +1,4 @@
+```css
 :root{
 --charcoal:#1F2421;
 --ivory:#F7F4EE;
@@ -48,20 +49,22 @@ font-size:2rem;
 margin-bottom:15px;
 }
 
+p{
+margin-bottom:20px;
+}
+
 section{
 padding:120px 0;
 }
 
-p{
-margin-bottom:20px;
-}
+/* NAVIGATION */
 
 nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-max-width:1200px;
 width:92%;
+max-width:1200px;
 margin:auto;
 padding:25px 0;
 position:sticky;
@@ -89,33 +92,36 @@ nav a:hover{
 color:var(--sage);
 }
 
-.logo{
-max-width:320px;
+/* MONOGRAM */
+
+.logo-monogram{
+display:flex;
+flex-direction:column;
+align-items:flex-start;
 }
 
-.logo-top{
-font-size:.8rem;
-letter-spacing:8px;
-font-weight:600;
-}
-
-.logo-line{
-height:1px;
-background:var(--sage);
-margin:10px 0;
-}
-
-.logo-main{
+.monogram-rh{
 font-family:'Cormorant Garamond',serif;
-font-size:2.2rem;
+font-size:3rem;
+font-weight:600;
+line-height:1;
 }
 
-.logo-tagline{
-font-size:.75rem;
-color:var(--sage);
-font-style:italic;
-margin-top:6px;
+.monogram-line{
+width:120px;
+height:2px;
+background:var(--brass);
+margin:8px 0;
 }
+
+.monogram-name{
+font-size:.75rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:var(--sage);
+}
+
+/* HERO */
 
 .hero{
 max-width:950px;
@@ -124,31 +130,31 @@ text-align:center;
 padding:140px 20px;
 }
 
-.hero-restorative{
-font-size:1.1rem;
-letter-spacing:12px;
+.hero-monogram{
+font-family:'Cormorant Garamond',serif;
+font-size:8rem;
 font-weight:600;
+line-height:1;
 }
 
 .hero-divider{
 height:2px;
-background:var(--sage);
-max-width:520px;
-margin:20px auto;
+background:var(--brass);
+max-width:260px;
+margin:25px auto;
 }
 
-.hero-hospitality{
+.hero-brand{
 font-family:'Cormorant Garamond',serif;
-font-size:6.5rem;
-line-height:1;
-margin-bottom:10px;
+font-size:2.2rem;
+margin-bottom:15px;
 }
 
 .hero-tagline{
 font-size:1.4rem;
 color:var(--sage);
 font-style:italic;
-margin-bottom:50px;
+margin-bottom:45px;
 }
 
 .lead{
@@ -164,6 +170,8 @@ gap:20px;
 margin-top:50px;
 flex-wrap:wrap;
 }
+
+/* BUTTONS */
 
 .button,
 .button-secondary{
@@ -192,11 +200,15 @@ background:var(--charcoal);
 color:white;
 }
 
+/* PHILOSOPHY */
+
 .philosophy{
 background:white;
 border-top:1px solid var(--stone);
 border-bottom:1px solid var(--stone);
 }
+
+/* SERVICES */
 
 .service-card{
 background:white;
@@ -227,9 +239,13 @@ margin-top:20px;
 margin-bottom:10px;
 }
 
+/* ABOUT */
+
 #about{
 background:#faf8f4;
 }
+
+/* VALUES */
 
 .values-grid{
 display:grid;
@@ -251,6 +267,8 @@ transform:translateY(-5px);
 box-shadow:var(--shadow);
 }
 
+/* CONTACT */
+
 .contact{
 background:var(--charcoal);
 color:white;
@@ -260,7 +278,6 @@ padding:140px 20px;
 
 .contact h2{
 color:white;
-margin-bottom:20px;
 }
 
 .contact p{
@@ -271,8 +288,9 @@ margin:0 auto 20px auto;
 .contact p:last-child{
 font-size:1.3rem;
 font-weight:500;
-color:#ffffff;
 }
+
+/* FOOTER */
 
 footer{
 background:#181c19;
@@ -281,6 +299,8 @@ text-align:center;
 padding:35px;
 font-size:.95rem;
 }
+
+/* MOBILE */
 
 @media(max-width:768px){
 
@@ -300,13 +320,12 @@ gap:18px;
 padding:100px 20px;
 }
 
-.hero-hospitality{
-font-size:3.8rem;
+.hero-monogram{
+font-size:5rem;
 }
 
-.hero-restorative{
-font-size:.9rem;
-letter-spacing:6px;
+.hero-brand{
+font-size:1.6rem;
 }
 
 .hero-tagline{
@@ -341,3 +360,4 @@ max-width:320px;
 text-align:center;
 }
 }
+```
